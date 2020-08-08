@@ -4,8 +4,14 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    draggedTask: "",
+  },
+  mutations: {
+    setDraggedTask(state, { taskName }) {
+      state.draggedTask = taskName;
+    },
+  },
   actions: {},
-  modules: {}
+  modules: {},
 });
